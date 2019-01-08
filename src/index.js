@@ -12,8 +12,14 @@ document.body.appendChild(component());
 import React from "react";
 import ReactDOM from "react-dom";
 
-const Index = () => {
-  return <div>Hello React!</div>;
-};
+const Index = () => <div>Hello React!</div>;
 
-ReactDOM.render(<Index />, document.getElementById("index"));
+
+render((
+  <Router history={hashHistory}>
+    <Route path="/" component={Index}/>
+  </Router>
+), document.getElementById('app'))
+
+import { Router, Route, hashHistory } from 'react-router'
+
