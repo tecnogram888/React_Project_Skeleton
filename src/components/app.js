@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Root, Route } from 'react-router-dom'
+import { connect } from 'react-redux'
 
 class App extends React.Component {
     render() {
@@ -8,9 +9,23 @@ class App extends React.Component {
                 <Route path="/" render={() => (
                     <h1>Welcome</h1>
                     )} />
+                <Route path="/" render={() => (
+                    <h1>{this.props.text}</h1>
+                    )} />
             </div>
         </Router>
     }
 }
 
-export default App
+const mapStateToProps = (state) => {
+    return {
+        text: state.text,
+    }
+}
+
+const wrappedApp = connect(
+    mapStateToProps
+  )(App)
+  
+
+export default wrappedApp
