@@ -1,25 +1,15 @@
 import _ from 'lodash';
-function component() {
-    let element = document.createElement('div');
+import React from 'react'
+import { render } from 'react-dom'
+import { Provider } from 'react-redux'
+import store from './store'
+import App from './components/App'
 
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('index')
+)
 
-    return element;
-}
-
-document.body.appendChild(component());
-
-import React from "react";
-import ReactDOM from "react-dom";
-
-const Index = () => <div>Hello React!</div>;
-
-
-render((
-  <Router history={hashHistory}>
-    <Route path="/" component={Index}/>
-  </Router>
-), document.getElementById('app'))
-
-import { Router, Route, hashHistory } from 'react-router'
-
+console.log('store is', store)
