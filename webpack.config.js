@@ -24,11 +24,20 @@ module.exports = {
                         plugins: [require('@babel/plugin-proposal-object-rest-spread')]
                     },
                 }
-            }
+            },
+            {
+                test: /\.css$/,
+                exclude: /node_modules/,
+                use: [
+                  'style-loader',
+                  { loader: 'css-loader', options: { importLoaders: 1 } },
+                  'postcss-loader'
+                ]
+              }
         ]
     },
     resolve: {
-        extensions: [ '.tsx', '.ts', '.js' ]
+        extensions: [ '.tsx', '.ts', '.js', '.css' ]
     },
     devtool: 'inline-source-map',
     devServer: {

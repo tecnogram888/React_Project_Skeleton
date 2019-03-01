@@ -20,7 +20,7 @@ class App extends React.Component {
                     <h1>Welcome</h1>
                     )} />
                 <Route path="/" render={() => (
-                    <h1>{this.props.text}</h1>
+                    <a>{this.props.text}</a>
                     )} />
                 <Route path="/" render={() => (
                     <Editor value={test} />
