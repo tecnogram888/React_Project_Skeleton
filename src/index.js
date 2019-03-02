@@ -11,5 +11,3 @@ render(
   </Provider>,
   document.getElementById('index')
 )
-
-console.log('store is', store)

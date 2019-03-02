@@ -11,13 +11,17 @@ const test = {
         children: []
     }, 'asdf', 'next']
 }
+import css from './../css/style.css'
+
+console.log(css)
+console.log('hey', css.a)
 
 class App extends React.Component {
     render() {
         return <Router>
             <div>
                 <Route path="/" render={() => (
-                    <h1>Welcome</h1>
+                    <h1 class="asdf">Welcome</h1>
                     )} />
                 <Route path="/" render={() => (
                     <a>{this.props.text}</a>
