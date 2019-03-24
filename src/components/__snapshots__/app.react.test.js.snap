@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot Test Practice -- Outline of whole app renders 1`] = `
+<div>
+  <h1
+    className="asdf"
+  >
+    Welcome
+  </h1>
+  <a>
+    hello world
+  </a>
+  <div>
+    <div>
+      Title is titles
+    </div>
+    <div>
+      <div>
+        Title is sub child
+      </div>
+    </div>
+    <li>
+      Value is 
+      asdf
+    </li>
+    <li>
+      Value is 
+      next
+    </li>
+  </div>
+</div>
+`;

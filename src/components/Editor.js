@@ -7,17 +7,17 @@ export default class Editor extends React.Component {
         let expanded
 
         if (children.length) {
-            expanded = children.map(child => {
+            expanded = children.map((child, i) => {
                 if (child instanceof Object) {
-                    return <Editor value = { child } />
+                    return <Editor value = { child } key={i} />
                 } else {
-                    return <div>Value is {child.toString()}</div>
+                    return <li key={i}>Value is {child.toString()}</li>
                 }
             })
         }
-
+        const titleString = `Title is ${title}`;
         return <div>
-            <div>Title is {title}</div>
+            <div key={0}>{titleString}</div>
             {expanded}
         </div>
     }

@@ -21,7 +21,7 @@ class App extends React.Component {
         return <Router>
             <div>
                 <Route path="/" render={() => (
-                    <h1 class="asdf">Welcome</h1>
+                    <h1 className="asdf">Welcome</h1>
                     )} />
                 <Route path="/" render={() => (
                     <a>{this.props.text}</a>
