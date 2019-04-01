@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Root, Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 
-import Editor from './Editor'
+import Editor from '../Editor'
 
 const test = {
     title: 'titles',
@@ -11,24 +11,16 @@ const test = {
         children: []
     }, 'asdf', 'next']
 }
-import css from './../css/style.css'
 
-console.log(css)
-console.log('hey', css.a)
+import css from './../../css/style.css'
 
 class App extends React.Component {
     render() {
         return <Router>
             <div>
-                <Route path="/" render={() => (
-                    <h1 className="asdf">Welcome</h1>
-                    )} />
-                <Route path="/" render={() => (
-                    <a>{this.props.text}</a>
-                    )} />
-                <Route path="/" render={() => (
-                    <Editor value={test} />
-                    )} />
+                <h1 className="asdf">App2</h1>
+                <a>{this.props.text}</a>
+                <Editor value={test} />
             </div>
         </Router>
     }
