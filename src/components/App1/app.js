@@ -20,7 +20,14 @@ class App extends React.Component {
                 <h1 className="asdf">App1</h1>
                 <a>{this.props.text}</a>
                 <Editor value={test} />
+                <Test children={<div>props</div>}></Test>
             </div>
+    }
+}
+
+class Test extends React.Component {
+    render() {
+        return <div>{this.props.children}</div>
     }
 }
 

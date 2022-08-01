@@ -9,6 +9,8 @@ const port: number = 3000
 let RedisStore = connectRedis(session)
 let client: redis.RedisClient = redis.createClient()
 
+client.on('error', err => {console.log('Error ' + err);});
+
 app.use(session({
     store: new RedisStore({ client }),
     secret: 'keyboard cat',
