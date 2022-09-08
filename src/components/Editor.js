@@ -1,5 +1,7 @@
 import React from 'react'
 
+import css from './Editor.css'
+
 export default class Editor extends React.Component {
     render() {
         const title = this.props.value.title
@@ -9,14 +11,14 @@ export default class Editor extends React.Component {
         if (children.length) {
             expanded = children.map((child, i) => {
                 if (child instanceof Object) {
-                    return <Editor value = { child } key={i} />
+                    return <Editor value={child} key={i} />
                 } else {
                     return <li key={i}>Value is {child.toString()}</li>
                 }
             })
         }
         const titleString = `Title is ${title}`;
-        return <div>
+        return <div className="editorBox">
             <div key={0}>{titleString}</div>
             {expanded}
         </div>

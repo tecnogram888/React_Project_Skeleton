@@ -11,6 +11,7 @@ webpack is a module bundler. See webpack.config.js for configuration.
 See "entry" for the file the code centers around
 See "module" and "rules" for the file processing we do
 For CSS
+    import the css file in the jsx file you need to use it, and then set the classname of the html rendered elements equal to the classnames in the css file
     Style Loader inserts the css into the page so it's active https://stackoverflow.com/a/34237524
     CSS Loader resolves css imports and requires https://github.com/webpack-contrib/css-loader and https://webpack.js.org/loaders/css-loader/
     postcss does autoprefixing for cross-browser css https://github.com/postcss/autoprefixer 

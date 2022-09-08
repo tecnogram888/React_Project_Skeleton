@@ -2,26 +2,29 @@ import React from 'react'
 import { BrowserRouter as Router, Root, Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 
-import Editor from '../Editor'
+import Editor from './../Editor'
 
 const test = {
     title: 'titles',
     children: [{
         title: 'sub child',
-        children: []
+        children: [{
+            children: [{
+                title: 'sub sub child',
+                children: []
+            }, 'asdf', 'next']
+        }],
     }, 'asdf', 'next']
 }
-
-import css from './../../css/style.css'
 
 class App extends React.Component {
     render() {
         return <div>
-                <h1 className="asdf">App1</h1>
-                <a>{this.props.text}</a>
-                <Editor value={test} />
-                <Test children={<div>props</div>}></Test>
-            </div>
+            <h1>App1</h1>
+            <a>{this.props.text}</a>
+            <Editor value={test} />
+            <Test children={<div>props</div>}></Test>
+        </div>
     }
 }
 
@@ -39,7 +42,7 @@ const mapStateToProps = (state) => {
 
 const wrappedApp = connect(
     mapStateToProps
-  )(App)
-  
+)(App)
+
 
 export default wrappedApp
