@@ -8,6 +8,7 @@ class RootApp extends React.Component {
     render() {
         return <div>
             <h1 className="asdf">Welcome</h1>
+            <p><Link to="/login/">Login</Link></p>
             <p><Link to="/app1/">App1</Link></p>
             <p><Link to="/app2/">App2</Link></p>
         </div>
