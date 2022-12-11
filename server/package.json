@@ -18,7 +18,7 @@
         "@types/express-session": "^1.15.14",
         "@types/redis": "^2.8.13",
         "connect-redis": "^4.0.2",
-        "express": "^4.17.1",
+        "express": "^4.17.3",
         "express-session": "^1.16.2",
         "redis": "^2.8.0",
         "typescript": "^3.6.3"
