@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot Test Practice -- Outline of whole app renders 1`] = `
+<div>
+  <div>
+    <h1
+      className="asdf"
+    >
+      Welcome
+    </h1>
+    <p>
+      <a
+        href="/login/"
+        onClick={[Function]}
+      >
+        Login
+      </a>
+    </p>
+    <p>
+      <a
+        href="/app1/"
+        onClick={[Function]}
+      >
+        App1
+      </a>
+    </p>
+    <p>
+      <a
+        href="/app2/"
+        onClick={[Function]}
+      >
+        App2
+      </a>
+    </p>
+  </div>
+</div>
+`;
