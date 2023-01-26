@@ -4,9 +4,9 @@ class Login extends React.Component {
     render() {
         return <div>
             <label for="username">Username:</label>
-            <input type="text" id="username" name="fname" /><br /><br />
+            <input type="text" id="username" name="username" /><br /><br />
             <label for="password">Password:</label>
-            <input type="text" id="lname" name="lname" /><br /><br />
+            <input type="password" id="password" name="password" /><br /><br />
             <input type="submit" value="Submit" />
         </div>
     }
