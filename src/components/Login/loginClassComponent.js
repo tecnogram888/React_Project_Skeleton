@@ -1,6 +1,6 @@
-import React, {useState} from 'react'
+import React from 'react'
 
-class Login extends React.Component {
+class LoginClassComponent extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -33,4 +33,4 @@ class Login extends React.Component {
     }
 }
 
-export default Login
+export default LoginClassComponent

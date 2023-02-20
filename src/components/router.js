@@ -5,7 +5,8 @@ import { createBrowserHistory } from 'history';
 import RootApp from './RootApp/app'
 import App1 from './App1/app'
 import App2 from './App2/app'
-import Login from './Login/login'
+import LoginClassComponent from './Login/loginClassComponent'
+import LoginFunctionalComponent from './Login/loginFunctionalComponent'
 
 const customHistory = createBrowserHistory();
 
@@ -16,7 +17,8 @@ class RouterApp extends React.Component {
                 <Route exact path="/" component={RootApp} />
                 <Route path="/app1" component={App1} />
                 <Route path="/app2" component={App2} />
-                <Route path="/login" component={Login} />
+                <Route path="/loginClass" component={LoginClassComponent} />
+                <Route path="/loginFunctional" component={LoginFunctionalComponent} />
             </div>
         </Router>
     }
