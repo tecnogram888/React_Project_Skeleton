@@ -1,5 +1,4 @@
 import React from 'react'
-import { BrowserRouter as Router, Root, Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import Editor from './../Editor'
