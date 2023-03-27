@@ -27,6 +27,9 @@ class RootApp extends React.Component {
       <div>
         <h1 className="asdf">Welcome</h1>
         <p>
+          <Link to="/todo/">TodoApp</Link>
+        </p>
+        <p>
           <Link to="/loginClass/">Login Class Component</Link>
         </p>
         <p>

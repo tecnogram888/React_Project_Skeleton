@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createBrowserHistory } from 'history';
 import RootApp from './RootApp/app';
+import TodoApp from './TodoApp/todo';
 import App1 from './App1/app';
 import App2 from './App2/app';
 import LoginClassComponent from './Login/loginClassComponent';
@@ -16,6 +17,7 @@ class RouterApp extends React.Component {
       <Router history={customHistory}>
         <div>
           <Route exact path="/" component={RootApp} />
+          <Route path="/todo" component={TodoApp} />
           <Route path="/app1" component={App1} />
           <Route path="/app2" component={App2} />
           <Route path="/loginClass" component={LoginClassComponent} />
